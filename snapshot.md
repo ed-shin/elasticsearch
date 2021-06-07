@@ -4,10 +4,12 @@ elasticsearch version: 7.8
 kibana version: 7.8
 ```
 
-## flow
-1. 환경변수 등록
-2. snapshot repository 설정
-3. snapshot 생성
+### Doc flow
+> 1. 환경변수 등록
+> 2. snapshot repository 설정
+> 3. snapshot 생성
+
+<br>
 
 ### 1. 환경변수 등록
 - [먼저, 엘라스틱서치를 실행하기 전에 환경변수 설정을 해야한다]
@@ -31,7 +33,7 @@ PUT _snapshot/[repository 명칭]
 
 ### 3. snapshot 생성
 ```
-PUT _snapshot/[repository 명칭]
+PUT _snapshot/[repository 명칭]/[snapshot 명칭]
 {
   "indices": [index 명칭],
   "ignore_unavailable": true,
